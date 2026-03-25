@@ -17,5 +17,11 @@ module.exports = {
     'ecmaVersion': 'latest',
     'sourceType': 'module'
   },
-  'rules': {}
+  'rules': {
+    'semi': ['error', 'always'],  
+    'quotes': ['error', 'single'],
+    'indent': ['error', 2],
+    'no-multi-spaces': 'error',
+    'comma-dangle': ['error', 'always-multiline'],
+  }
 }
