@@ -1,17 +1,17 @@
-import sortHeroes from "../sortHeroes";
+import sortHeroes from '../sortHeroes';
 
-describe("Функция сортировки героев по здоровью", () => {
-  test("сортировать героев по убыванию здоровья", () => {
+describe('Функция сортировки героев по здоровью', () => {
+  test('сортировать героев по убыванию здоровья', () => {
     const input = [
-      { name: "мечник", health: 10 },
-      { name: "маг", health: 100 },
-      { name: "лучник", health: 80 },
+      { name: 'мечник', health: 10 },
+      { name: 'маг', health: 100 },
+      { name: 'лучник', health: 80 },
     ];
     
     const expected = [
-      { name: "маг", health: 100 },
-      { name: "лучник", health: 80 },
-      { name: "мечник", health: 10 },
+      { name: 'маг', health: 100 },
+      { name: 'лучник', health: 80 },
+      { name: 'мечник', health: 10 },
     ];
     
     const result = sortHeroes(input);
@@ -20,10 +20,10 @@ describe("Функция сортировки героев по здоровью
     expect(result).toEqual(expected);
   });
   
-  test("не должна мутировать исходный массив", () => {
+  test('не должна мутировать исходный массив', () => {
     const input = [
-      { name: "мечник", health: 10 },
-      { name: "маг", health: 100 },
+      { name: 'мечник', health: 10 },
+      { name: 'маг', health: 100 },
     ];
     
     const original = [...input];
@@ -32,25 +32,25 @@ describe("Функция сортировки героев по здоровью
     expect(input).toEqual(original);
   });
   
-  test("должна корректно обрабатывать пустой массив", () => {
+  test('должна корректно обрабатывать пустой массив', () => {
     const input = [];
     const result = sortHeroes(input);
     
     expect(result).toEqual([]);
   });
   
-  test("должна корректно обрабатывать массив с одним элементом", () => {
-    const input = [{ name: "мечник", health: 50 }];
+  test('должна корректно обрабатывать массив с одним элементом', () => {
+    const input = [{ name: 'мечник', health: 50 }];
     const result = sortHeroes(input);
     
-    expect(result).toEqual([{ name: "мечник", health: 50 }]);
+    expect(result).toEqual([{ name: 'мечник', health: 50 }]);
   });
   
-  test("должна корректно обрабатывать героев с одинаковым здоровьем", () => {
+  test('должна корректно обрабатывать героев с одинаковым здоровьем', () => {
     const input = [
-      { name: "герой1", health: 50 },
-      { name: "герой2", health: 50 },
-      { name: "герой3", health: 50 },
+      { name: 'герой1', health: 50 },
+      { name: 'герой2', health: 50 },
+      { name: 'герой3', health: 50 },
     ];
     
     const result = sortHeroes(input);
